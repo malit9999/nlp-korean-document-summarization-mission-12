@@ -1,55 +1,53 @@
-# Bootcamp Mission 12 - KoBART 기반 한국어 문서 요약
+# Korean Document Summarization with KoBART
 
-## 1. 개요
-AI Hub 문서요약 데이터를 활용해 한국어 문서 요약 모델을 파인튜닝한 미션입니다.
+> **Bootcamp Mission 12** | Natural Language Processing
 
-## 2. 목표
-KoBART 계열 모델을 활용해 데이터 전처리부터 파인튜닝, 정량/정성 평가까지 수행하는 것을 목표로 했습니다.
+## 미션 소개
+AI Hub 문서요약 텍스트를 활용해 한국어 문서를 요약하는 KoBART 기반 모델을 구성한 NLP 미션입니다. 데이터 전처리부터 파인튜닝과 평가까지 요약 모델 파이프라인을 다룹니다.
 
-## 3. 사용 기술
+## 구현 목표
+- 요약 데이터의 입력 문서와 요약문 구조를 이해한다.
+- 사전학습 언어모델을 요약 과제에 맞게 파인튜닝한다.
+- 생성 결과를 정성·정량적으로 검토한다.
+
+## 주요 구현 내용
+- 한국어 문서요약 데이터 전처리
+- KoBART 기반 파인튜닝
+- 생성형 요약 결과 평가
+
+## 사용 기술
 - Python
-- pandas
-- numpy
-- matplotlib
-- torch
-- transformers
-- datasets
-- evaluate
-- tqdm
+- Transformers
+- KoBART
+- NLP
+- Jupyter Notebook
 
-## 4. 주요 기능
-- 문서 요약 데이터 로드
-- 텍스트 정제 및 이상치 제거
-- KoBART 파인튜닝
-- ROUGE 및 BERTScore 평가
-
-## 5. 실행 방법
-```bash
+## 실행 방법
+`ash
 pip install -r requirements.txt
 jupyter notebook notebooks/mission12.ipynb
-```
+`
 
-## 6. 주요 파일
-- `notebooks/mission12.ipynb`
+> 데이터셋 또는 사전학습 모델이 외부에서 제공되는 경우, 실행 전에 노트북 또는 코드의 데이터 로드 설정을 확인해야 합니다.
 
-## 7. 폴더 구조
-```text
-bootcamp-mission-12
-  .gitignore
-  notebooks/
-    mission12.ipynb
-  README.md
-  requirements.txt
-```
+## 폴더 구조
+`	ext
+notebooks/
+  mission12.ipynb
+README.md
+requirements.txt
+.gitignore
+`
 
-## 8. 학습 내용
-문서 요약 태스크에서 입력 길이, 모델 선택, 평가 지표가 결과에 미치는 영향을 학습했습니다.
+## 학습 내용
+- 요약은 분류가 아닌 텍스트 생성 문제라는 점
+- 입력 길이와 생성 파라미터가 결과 품질에 영향을 준다는 점
 
-## 9. 트러블슈팅
-미션을 진행하며 발생한 오류와 해결 과정은 노트북 또는 보고서에 정리했습니다.
+## 트러블슈팅 및 재현 시 참고 사항
+AI Hub 데이터는 별도 접근 권한과 다운로드 절차가 필요할 수 있습니다.
 
-## 10. 결과 화면
-결과 이미지는 노트북 출력, 보고서 또는 `images/` 폴더에서 확인할 수 있습니다.
+## 결과 확인
+전처리·학습·요약 생성 결과는 노트북에서 확인할 수 있습니다.
 
-## 11. 공개 전 확인 사항
-- 제출 노트북만 포함했으며, 원본 데이터와 모델 파일은 공개 범위 확인 전 포함하지 않았습니다.
+## 포트폴리오 관점
+이 저장소는 **Natural Language Processing** 역량을 학습·실험한 결과물입니다. 구현 범위와 실행 조건은 코드 및 노트북을 기준으로 확인할 수 있습니다.
