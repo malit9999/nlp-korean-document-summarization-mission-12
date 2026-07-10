@@ -1,0 +1,9 @@
+jupyter
+pandas
+numpy
+matplotlib
+torch
+transformers
+datasets
+evaluate
+tqdm
